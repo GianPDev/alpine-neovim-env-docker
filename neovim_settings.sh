@@ -28,6 +28,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'JuliaEditorSupport/julia-vim'
 Plug 'ap/vim-css-color'
 Plug 'mattn/emmet-vim'
+Plug 'pantharshit00/vim-prisma'
 
 call plug#end()
 
@@ -287,5 +288,31 @@ nnoremap <silent> <Leader>hh :History<CR>
 nnoremap <silent> <Leader>h: :History:<CR>
 nnoremap <silent> <Leader>h/ :History/<CR>
 EOF
+
+#cat << 'EOF' > "$HOME/.config/nvim/coc-settings.json"
+#{
+#  "eslint.autoFixOnSave": true,
+#  "eslint.filetypes": ["javascript", "javascriptreact", "typescript", "typescriptreact"],
+#  "coc.preferences.formatOnSaveFiletypes": [
+#    "javascript",
+#    "javascriptreact",
+#    "typescript",
+#    "typescriptreact"
+#  ],
+#  "tsserver.formatOnType": true,
+#  "coc.preferences.formatOnType": true,
+#}
+#EOF
+
+cat << 'EOF' > "$HOME/.config/nvim/coc-settings.json"
+{
+  "eslint.autoFixOnSave": true,
+  "eslint.filetypes": ["javascript", "javascriptreact", "typescript", "typescriptreact"],
+  "coc.preferences.formatOnSaveFiletypes": ["*"],
+  "tsserver.formatOnType": true,
+  "coc.preferences.formatOnType": true,
+}
+EOF
+
 
 source $HOME/.profile
